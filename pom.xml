@@ -1,0 +1,38 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.constellationWebApp</groupId>
+  <artifactId>gattling-test</artifactId>
+  <version>1</version>
+<build>
+  <sourceDirectory>src/main/scala</sourceDirectory>
+  <testSourceDirectory>src/test/scala</testSourceDirectory>
+  <plugins>
+    <plugin>
+      <groupId>net.alchim31.maven</groupId>
+      <artifactId>scala-maven-plugin</artifactId>
+      <version>3.0.5</version>
+      <configuration>
+         <jvmArgs>
+          <jvmArg>-Xss100M</jvmArg>
+        </jvmArgs>
+        <args>
+          <arg>-target:jvm-1.8</arg>
+          <arg>-deprecation</arg>
+          <arg>-feature</arg>
+          <arg>-unchecked</arg>
+          <arg>-language:implicitConversions</arg>
+          <arg>-language:postfixOps</arg>
+        </args>
+      </configuration>
+      <executions>
+        <execution>
+          <goals>
+            <goal>compile</goal>
+            <goal>testCompile</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+</project>
