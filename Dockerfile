@@ -6,7 +6,7 @@ COPY src ./src
 COPY pom.xml ./
 ## RUN statement to run script 
 #RUN mvn clean package 
-RUN mvn gatling:test -Dgatling.simulationClass=default.RecordedSimulation
+ENTRYPOINT ["mvn","gatling:test","-Dgatling.simulationClass=default.RecordedSimulation"]
 
 
 
